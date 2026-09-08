@@ -32,8 +32,13 @@ O que aprendemos com este projeto: aprendemos a estruturar um cálculo de polít
 Papel de cada integrante:
 
 Alexandre Jubram: criação do repositório do projeto e organização das pastas do grupo.
+
 Bettina Kalassa: upload dos arquivos da planilha e do simulador HTML e redação da primeira versão do README do Projeto 1 (descrição e disclaimers).
+
 Izabel Born: upload dos arquivos e redação do README do Projeto 1, com revisão dos disclaimers de dados e de IA.
+
 Maria Eduarda Silva: upload dos arquivos e redação do README do Projeto 2 (descrição e disclaimers).
+
 Maria Thereza Favaro: upload dos arquivos e redação do README do Projeto 2, com revisão da estrutura e dos dados utilizados.
+
 Yuri Neres: reunião dos prints do simulador em funcionamento e registro da entrega no eClass.
