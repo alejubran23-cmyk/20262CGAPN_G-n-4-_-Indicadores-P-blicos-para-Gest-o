@@ -27,7 +27,25 @@ O simulador também classifica a escola por porte, aplica uma regra didática de
 **Para que foi usada:** gerar o artefato HTML interativo do simulador, transformando o modelo construído em Excel (abas `Parametros_PNAE` e `Simulador_Escola`) em uma página web com campos editáveis, cálculo automático do repasse (equivalente ao `SUMPRODUCT` de matrículas × valor per capita × dias letivos), classificação de porte, regra de elegibilidade com `SE` aninhado/`E`/`OU` e a simulação por fator de ajuste com o percurso dos cenários.
 
 **Exemplo de prompt utilizado:**
-> "Transforme esta planilha do simulador de repasse do PNAE, com as abas Parametros_PNAE e Simulador_Escola, em uma página HTML interativa. Mantenha os mesmos valores per capita, dias letivos e a fórmula de cálculo do repasse (matrículas × valor per capita × dias letivos). Inclua um campo de matrículas por modalidade editável, a classificação de porte da escola, a regra de elegibilidade para complementação municipal e um simulador com fator de ajuste que reproduza a Tabela de Dados de -20% a +20%, em passos de 5%."
+> Você vai gerar um artefato HTML interativo (um único arquivo, autocontido) que simula o cálculo do repasse do PNAE, a partir do modelo que eu construi em Excel para o Projeto 1 do curso Análise de Dados para Pesquisas em Políticas Públicas (FGV EAESP).
+>
+> Anexei dois arquivos:
+> 1. Minha planilha Excel, com as abas Parametros_PNAE e Simulador_Escola, contendo os dados e as fórmulas.
+> 2. Um arquivo modelo.html, que é um artefato sobre um assunto totalmente diferente (cálculo do valor atual, matemática financeira). Não use nada do conteúdo desse arquivo — nenhum dado, nenhuma fórmula, nenhum texto dele. Use apenas como referência de: paleta de cores e tipografia, formato dos cards e das tabelas, e o tipo de mecânica interativa (campos editáveis no topo, um botão que avança passo a passo reconstruindo uma tabela de resultados, valores que reagem em tempo real a mudanças nos parâmetros).
+>
+> O que o artefato deve reproduzir, fielmente ao que está na minha planilha:
+> - Uma tabela de referência com os parâmetros do PNAE (modalidades e valores per capita), extraída da aba Parametros_PNAE.
+> - Os dados da minha escola (nome, bairro, município) e a tabela de matrículas por modalidade, com campos editáveis para o número de matrículas.
+> - O cálculo automático de: total de matrículas, porte da escola (a mesma regra de classificação por faixas que está na minha planilha), repasse anual estimado, e o resultado da regra de elegibilidade para complementação municipal (se ela existir na minha planilha).
+> - A simulação com o parâmetro de ajuste que criei na Tabela de Dados do Excel: um campo editável para esse fator, mostrando como matrículas e repasse mudam em tempo real.
+> - Um mecanismo com botões que percorre, passo a passo, os mesmos cenários que estão na minha Tabela de Dados do Excel, reconstruindo a tabela de resultados cenário a cenário — não apenas mostrando o resultado final de uma vez.
+>
+> Regras importantes:
+> - Use os dados reais da minha planilha (nome da escola, matrículas, valores per capita, faixas de classificação, fórmulas). Não invente números nem modalidades que não estejam na minha planilha.
+> - Siga o mesmo estilo visual do modelo.html anexado: paleta de cores, tipografia, formato dos cards, dos botões e da mecânica de "avançar".
+> - O artefato deve ser um único arquivo HTML, sem dependências externas (sem CDN, sem chamadas à internet, sem fontes externas), porque será usado sem acesso à web.
+> - Reproduza as fórmulas da minha planilha com a mesma lógica (soma, PROCV, SOMARPRODUTO, SE aninhado com E/OU, e o fator de ajuste usado na Tabela de Dados) — não simplifique nem troque por uma lógica diferente da que eu construí.
+> - Ao final, liste rapidamente quais células da minha planilha inspiraram cada parte do artefato (preciso disso para documentar o uso de IA no portfólio do GitHub, junto com este prompt).
 
 **O que foi ajustado manualmente:**
 - Conferência dos valores per capita e dos dias letivos gerados pela IA contra os valores originais da planilha (aba `Parametros_PNAE`).
@@ -39,7 +57,7 @@ O simulador também classifica a escola por porte, aplica uma regra didática de
 
 **Fonte oficial:** Resolução CD/FNDE nº 1, de 18 de fevereiro de 2026, que altera a Resolução CD/FNDE nº 6, de 2020, com reajuste médio de 14,35% em relação a 2025 nos valores per capita do PNAE, em vigor desde a primeira parcela de 2026.
 
-**Link oficial:** https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd_fnde-no-1-de-18-de-fevereiro-de-2026-dou-imprensa-nacional.pdf/view
+**Link oficial:** [Resolução CD/FNDE nº 1/2026](https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd_fnde-no-1-de-18-de-fevereiro-de-2026-dou-imprensa-nacional.pdf/view)
 
 **O que os dados representam:**
 Os dados oficiais utilizados são os valores per capita diários (em R$) pagos por modalidade de ensino (creche, pré-escola, fundamental, médio, EJA, indígena/quilombola e AEE em contraturno) e o número de dias letivos considerados no ano para o cálculo do repasse. Esses dois elementos, aplicados às matrículas de uma escola, permitem estimar o valor anual que ela receberia do PNAE.
