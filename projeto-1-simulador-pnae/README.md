@@ -19,6 +19,27 @@ O simulador também classifica a escola por porte, aplica uma regra didática de
    - O repasse, o porte e a elegibilidade são recalculados automaticamente.
    - No campo **"Fator de Ajuste"**, digite um percentual (ex.: `10` para +10%, `-10` para -10%) e observe o impacto sobre as matrículas ajustadas e o repasse.
    - O botão **"Próximo cenário"** percorre os cenários de -20% a +20%, em passos de 5 pontos percentuais, reconstruindo a Tabela de Dados.
+  
+## Prints do resultado
+
+### Alteração das matrículas e atualização automática dos indicadores
+
+<img width="1418" height="778" alt="image" src="https://github.com/user-attachments/assets/63197249-1de3-4861-aa8c-1dbd8f4122c2" />
+
+Ao alterar o número de matrículas por modalidade, o simulador recalcula automaticamente o total de alunos, o porte da escola, o valor estimado do repasse anual e a regra didática de elegibilidade para complementação municipal.
+
+No exemplo acima, o total passa para **220 matrículas**, fazendo com que a escola seja classificada como **Média**, com repasse anual estimado de **R$ 41.080,00** e resultado **Inelegível** para a regra didática de complementação.
+
+### Simulação com fator de ajuste
+
+<img width="1345" height="390" alt="image" src="https://github.com/user-attachments/assets/98d9eddd-3457-4d00-9064-6f7206dc5ff2" />
+
+O campo **Fator de Ajuste** permite testar cenários de aumento ou redução das matrículas e observar imediatamente o impacto sobre o total de alunos e o repasse anual.
+
+No exemplo acima, foi aplicado um fator de **-24%**, reduzindo as matrículas ajustadas de 190 para **144,4** e o repasse anual estimado de **R$ 37.660,00 para R$ 28.621,60**.
+
+
+     
 
 ## Uso de Inteligência Artificial
 
