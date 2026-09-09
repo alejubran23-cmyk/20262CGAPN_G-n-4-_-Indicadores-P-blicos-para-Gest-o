@@ -31,9 +31,6 @@ Ao selecionar a opção **Urbana** no filtro de localização, os gráficos são
 
 <img width="1316" height="748" alt="image" src="https://github.com/user-attachments/assets/6286210c-3613-488a-937e-539f6b284869" />
 
-
-**Print 2 — Dashboard após a seleção do filtro “Urbana”.**
-
 Dessa forma, o dashboard permite observar como os indicadores educacionais se modificam de acordo com a localização das escolas, facilitando a análise e a interpretação dos dados do Censo Escolar.
 
 ## Uso de Inteligência Artificial
