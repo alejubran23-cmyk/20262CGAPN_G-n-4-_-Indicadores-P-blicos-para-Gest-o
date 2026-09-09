@@ -18,14 +18,14 @@ A seleção do tipo de localização altera os resultados apresentados nos gráf
 
 A seguir, são apresentados os prints do dashboard em funcionamento, mostrando os resultados obtidos a partir da seleção do filtro de localização.
 
-### Página inicial — Localização Rural
+### Ao interagir com o gráfico e escolher — Localização Rural
 
 Ao abrir a planilha, o dashboard apresenta inicialmente a opção **Rural** selecionada. Nesse resultado, são apresentados os indicadores referentes às escolas localizadas na zona rural, incluindo quantidade de escolas, distribuição por dependência administrativa, matrículas por etapa de ensino, tamanho das escolas, gênero, faixa etária e raça/cor.
 
 <img width="1158" height="652" alt="image" src="https://github.com/user-attachments/assets/61247078-25e7-47e1-a6a1-91374fe9610d" />
 
 
-### Resultado — Localização Urbana
+### Ao selecionar — Localização Urbana
 
 Ao selecionar a opção **Urbana** no filtro de localização, os gráficos são atualizados automaticamente, passando a apresentar os dados referentes às escolas localizadas na zona urbana.
 
