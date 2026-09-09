@@ -4,61 +4,82 @@
 
 O projeto organiza, em uma planilha (`DASHBOARDEXCEL.xlsx`), a base de dados das escolas da rede municipal de São Paulo, com informações de identificação (nome da entidade, dependência administrativa), localização (endereço, bairro, zona urbana/rural, localização diferenciada como terra indígena) e demais variáveis do cadastro escolar.
 
-A partir dessa base, o dashboard permite visualizar e filtrar as escolas por características como dependência, tipo de localização e bairro, servindo de apoio a análises sobre a distribuição da rede municipal de ensino na cidade.
+A partir dessa base, o dashboard permite visualizar e filtrar as escolas por características como dependência administrativa, tipo de localização e bairro, servindo de apoio a análises sobre a distribuição da rede municipal de ensino na cidade.
 
 ## Como usar
 
-Abra o arquivo `DASHBOARDEXCEL.xlsx`, que contém a aba com a base de dados bruta (uma linha por escola, com colunas de identificação e localização) e o painel/dashboard construído a partir dela.
+Abra o arquivo `DASHBOARDEXCEL.xlsx`, que contém a aba com a base de dados e o painel/dashboard construído a partir dela.
 
-> ⚠️ **[Grupo: completar]** Descrever aqui a ordem de abas do arquivo, quais filtros/segmentações de dados (slicers) devem ser ajustados antes de olhar os gráficos, e o que precisa ser preenchido ou selecionado para o painel atualizar — por exemplo, filtro de bairro, dependência ou tipo de localização.
+Ao abrir o arquivo, o usuário encontra a página inicial da planilha **“Dash da Educação”**, que apresenta os principais indicadores das escolas municipais de São Paulo. O dashboard possui um filtro de **Localização**, que permite selecionar entre **Rural** e **Urbana**.
+
+A seleção do tipo de localização altera os resultados apresentados nos gráficos, permitindo comparar as características das escolas e das matrículas de acordo com sua localização.
+
+## Resultados do Dashboard
+
+A seguir, são apresentados os prints do dashboard em funcionamento, mostrando os resultados obtidos a partir da seleção do filtro de localização.
+
+### Página inicial — Localização Rural
+
+Ao abrir a planilha, o dashboard apresenta inicialmente a opção **Rural** selecionada. Nesse resultado, são apresentados os indicadores referentes às escolas localizadas na zona rural, incluindo quantidade de escolas, distribuição por dependência administrativa, matrículas por etapa de ensino, tamanho das escolas, gênero, faixa etária e raça/cor.
+
+**<img width="1158" height="652" alt="image" src="https://github.com/user-attachments/assets/61247078-25e7-47e1-a6a1-91374fe9610d" />
+
+
+### Resultado — Localização Urbana
+
+Ao selecionar a opção **Urbana** no filtro de localização, os gráficos são atualizados automaticamente, passando a apresentar os dados referentes às escolas localizadas na zona urbana.
+
+![Dashboard da Educação — Localização Urbana](./prints-dashboard/dashboard-urbana.jpg)
+
+**Print 2 — Dashboard após a seleção do filtro “Urbana”.**
+
+Dessa forma, o dashboard permite observar como os indicadores educacionais se modificam de acordo com a localização das escolas, facilitando a análise e a interpretação dos dados do Censo Escolar.
 
 ## Uso de Inteligência Artificial
 
-**Ferramenta utilizada:** Claude e ChatGPT
+**Ferramentas utilizadas:** Claude e ChatGPT.
 
-**Para que foi usada:** [Grupo: descrever o que foi de fato feito com apoio de IA neste projeto — por exemplo, limpeza/organização das colunas da base de dados, sugestão de fórmulas para os gráficos do dashboard, ou geração de texto explicativo. Se o dashboard foi construído manualmente no Excel, sem apoio de IA, registrar isso explicitamente aqui.]
+**Para que foram utilizadas:** as ferramentas de Inteligência Artificial foram utilizadas como apoio na organização e revisão das informações do projeto, na elaboração do texto explicativo do dashboard e na estruturação da documentação do projeto.
 
-**Exemplo de prompt utilizado:** [Grupo: colar aqui um prompt real usado pelo grupo, se houver]
+**Exemplo de prompt utilizado:**
 
-**O que foi ajustado manualmente:** [Grupo: descrever os ajustes feitos depois da resposta da IA, como correção de colunas, conferência dos dados do Censo Escolar, ajustes de formatação dos gráficos, etc.]
+> “Organize uma descrição para um dashboard construído no Excel com dados do Censo Escolar sobre as escolas municipais de São Paulo, explicando os filtros, gráficos e principais informações apresentadas.”
+
+**O que foi ajustado manualmente:** os integrantes do grupo conferiram as informações, organizaram os dados no Excel, construíram e ajustaram os gráficos e filtros do dashboard e realizaram a conferência dos resultados apresentados.
 
 ## Fonte de Dados
 
-**Fonte oficial:** [Grupo: confirmar — pelas colunas da base (`NO_MUNICIPIO`, `NO_ENTIDADE`, `TP_DEPENDENCIA`, `TP_LOCALIZACAO`, `TP_LOCALIZACAO_DIFERENCIADA`, `DS_ENDERECO`), os dados têm o formato dos microdados do Censo Escolar (INEP), provavelmente Censo Escolar 2024, filtrados para o município de São Paulo, rede Municipal]
+**Fonte oficial:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), por meio dos microdados do Censo Escolar.
 
-**Link oficial:** https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data 
+**Link oficial:** [INEP Data — Dados Abertos](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data?utm_source=chatgpt.com)
 
-**O que os dados representam:**
-A base reúne o cadastro de estabelecimentos de ensino da rede municipal de São Paulo, com uma linha por escola. Cada linha traz a identificação da unidade (nome, dependência administrativa), sua localização (endereço completo, bairro, zona urbana ou rural) e, quando aplicável, se está em localização diferenciada, como terra indígena. Essas informações permitem mapear e analisar como a rede municipal de ensino está distribuída pela cidade.
+**O que os dados representam:** a base reúne informações sobre estabelecimentos de ensino da rede municipal de São Paulo, com uma linha por escola. Cada linha traz informações de identificação da unidade, dependência administrativa, localização, endereço e outras características utilizadas para a construção do dashboard.
 
-**Estrutura (principais colunas):**
+### Estrutura dos principais dados
 
-| Coluna | Descrição |
-|---|---|
-| `NO_MUNICIPIO` | Município da escola (no caso, São Paulo) |
-| `NO_ENTIDADE` | Nome da escola/unidade educacional |
-| `TP_DEPENDENCIA` / `DEPENDENCIA` | Código e descrição da dependência administrativa (ex.: Municipal) |
-| `TP_LOCALIZACAO` / `LOCALIZAÇÃO` | Código e descrição da zona (urbana ou rural) |
-| `TP_LOCALIZACAO_DIFERENCIADA` / `LOC_DIFERENCIADA` | Indicam se a escola está em localização diferenciada, como terra indígena, e se essa condição se aplica |
-| `DS_ENDERECO`, `NU_ENDERECO`, `DS_COMPLEMENTO` | Logradouro, número e complemento do endereço |
-| `NO_BAIRRO` | Bairro onde a escola está localizada |
+| Coluna                                             | Descrição                                           |
+| -------------------------------------------------- | --------------------------------------------------- |
+| `NO_MUNICIPIO`                                     | Município da escola (São Paulo)                     |
+| `NO_ENTIDADE`                                      | Nome da escola/unidade educacional                  |
+| `TP_DEPENDENCIA` / `DEPENDENCIA`                   | Dependência administrativa da escola                |
+| `TP_LOCALIZACAO` / `LOCALIZAÇÃO`                   | Localização da escola: urbana ou rural              |
+| `TP_LOCALIZACAO_DIFERENCIADA` / `LOC_DIFERENCIADA` | Indica se a escola está em localização diferenciada |
+| `DS_ENDERECO`, `NU_ENDERECO`, `DS_COMPLEMENTO`     | Informações referentes ao endereço da escola        |
+| `NO_BAIRRO`                                        | Bairro onde a escola está localizada                |
 
-A planilha original possui outras colunas além dessas, usadas no dashboard para compor os gráficos e filtros.
-
-> Demais colunas relevantes usadas no painel: matrículas, raça/cor, gênero, porte das escolas, etc
+Além dessas informações, outras variáveis da base foram utilizadas para construir os indicadores apresentados no dashboard, como **matrículas, raça/cor, gênero, faixa etária, etapa de ensino e porte das escolas**.
 
 ## Participação do Grupo
 
-**O que aprendemos com este projeto:**
-Aprendemos a organizar uma base de dados cadastral extensa (com centenas de escolas e dezenas de colunas) em um dashboard que resume as principais características da rede municipal de ensino, a diferenciar dados de identificação e localização, e a construir visualizações que facilitam a leitura de uma base originalmente extraída de um cadastro oficial e pouco amigável para leitura direta. Também aprendemos a importância de documentar a fonte e a estrutura dos dados para que qualquer pessoa, mesmo sem ter acompanhado a construção do dashboard, entenda o que cada informação representa.
+**O que aprendemos com este projeto:** aprendemos a organizar uma base de dados cadastral extensa, com centenas de escolas e diversas variáveis, em um dashboard capaz de resumir as principais características da rede municipal de ensino. Também aprendemos a utilizar filtros e visualizações para facilitar a interpretação dos dados e a importância de documentar a fonte e a estrutura das informações utilizadas.
 
 **Papel de cada integrante:**
 
-| Integrante | Papel |
-|---|---|
-| Alexandre Jubram | Criação do repositório do projeto e organização das pastas do grupo |
-| Bettina Kalassa | Upload dos arquivos e redação do README do Projeto 1 (descrição e disclaimers) |
-| Izabel Born | Upload dos arquivos e redação do README do Projeto 1, com revisão dos disclaimers de dados e de IA |
-| Maria Eduarda Pereira | Upload dos arquivos do dashboard e redação da primeira versão do README do Projeto 2 (descrição e disclaimers) |
-| Maria Thereza Favaro | Upload dos arquivos do dashboard e redação do README do Projeto 2, com revisão da estrutura e dos dados utilizados |
-| Yuri Neres | Reunião dos prints do dashboard em funcionamento e registro da entrega no eClass |
+| Integrante            | Papel                                                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Alexandre Jubram      | Criação do repositório do projeto e organização das pastas do grupo                                                |
+| Bettina Kalassa       | Upload dos arquivos e redação do README do Projeto 1                                                               |
+| Izabel Born           | Upload dos arquivos e redação do README do Projeto 1, com revisão dos dados e disclaimers                          |
+| Maria Eduarda Pereira | Upload dos arquivos do dashboard e redação da primeira versão do README do Projeto 2                               |
+| Maria Thereza Favaro  | Upload dos arquivos do dashboard e redação do README do Projeto 2, com revisão da estrutura e dos dados utilizados |
+| Yuri Neres            | Reunião dos prints do dashboard em funcionamento e registro da entrega no eClass                                   |
