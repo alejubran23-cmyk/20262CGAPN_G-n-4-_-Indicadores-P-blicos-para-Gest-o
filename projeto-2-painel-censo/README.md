@@ -14,7 +14,7 @@ Abra o arquivo `DASHBOARDEXCEL.xlsx`, que contém a aba com a base de dados brut
 
 ## Uso de Inteligência Artificial
 
-**Ferramenta utilizada:** [Grupo: preencher — ex.: Claude, ChatGPT, Copilot do Excel]
+**Ferramenta utilizada:** Claude e ChatGPT
 
 **Para que foi usada:** [Grupo: descrever o que foi de fato feito com apoio de IA neste projeto — por exemplo, limpeza/organização das colunas da base de dados, sugestão de fórmulas para os gráficos do dashboard, ou geração de texto explicativo. Se o dashboard foi construído manualmente no Excel, sem apoio de IA, registrar isso explicitamente aqui.]
 
@@ -45,7 +45,7 @@ A base reúne o cadastro de estabelecimentos de ensino da rede municipal de São
 
 A planilha original possui outras colunas além dessas, usadas no dashboard para compor os gráficos e filtros.
 
-> Demais colunas relevantes usadas no painel: matrículas, etapas de ensino ou indicadores calculados.
+> Demais colunas relevantes usadas no painel: matrículas, raça/cor, gênero, porte das escolas, etc
 
 ## Participação do Grupo
 
