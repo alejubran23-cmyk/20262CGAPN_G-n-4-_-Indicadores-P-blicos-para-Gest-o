@@ -1,171 +1,142 @@
-# Painel do Censo Escolar 2024 com Power Query
+# Projeto 2 — Painel do Censo Escolar 2024
 
-## Objetivo
+## Sobre o projeto
 
-O projeto apresenta um dashboard interativo construído no Excel a partir dos **Microdados do Censo Escolar 2024**, disponibilizados pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
+Este projeto foi desenvolvido pelo Grupo 4 para a disciplina de **Análise de Dados para Pesquisas em Políticas Públicas**.
 
-Nesta versão, o projeto foi atualizado para utilizar a **base nacional completa do Censo Escolar**, contendo municípios de todo o Brasil. O tratamento dos dados é realizado no **Power Query**, que filtra a base de acordo com a **UF e o Município definidos pelo usuário**, permitindo que o dashboard trabalhe apenas com os dados do município selecionado.
+O objetivo foi construir, no Microsoft Excel, um painel interativo a partir dos **Microdados do Censo Escolar 2024**, disponibilizados pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 
-Além da identificação e localização das escolas, foram incorporadas informações sobre **dependência administrativa, tamanho da escola, localização diferenciada, situação de funcionamento e condições de infraestrutura**, incluindo abastecimento de água, energia, esgoto e destinação do lixo.
-
-O dashboard permite analisar diferentes características das escolas e das matrículas de forma dinâmica, utilizando tabelas e gráficos dinâmicos conectados a segmentações de dados.
+A base contempla escolas de diferentes dependências administrativas — federal, estadual, municipal e privada. O tratamento dos dados foi realizado por meio do Power Query, com utilização de parâmetros de UF e município e integração de tabelas auxiliares.
 
 ---
 
-## Como usar
+## Tratamento dos dados
 
-Abra o arquivo `Projeto2_Painel_Censo_PowerQuery_Grupo 4.xlsx`.
+Os Microdados do Censo Escolar 2024 foram importados e tratados por meio do **Power Query**.
 
-Na aba **`Parâmetros`**, informe:
-
-- **UF:** sigla do estado desejado;
-- **Município:** nome do município que será analisado.
-
-Após alterar o município, acesse a guia **Dados** do Excel e clique em **Atualizar Tudo**.
-
-O Power Query utiliza os valores informados em `Parâmetros` para filtrar a base nacional do Censo Escolar e carregar somente os registros correspondentes ao município escolhido.
-
-As tabelas dinâmicas e os gráficos do **`DASH DA EDUCAÇÃO`** são então atualizados com os novos dados.
-
-### Seleção do município
-
-> **INSERIR PRINT 1 AQUI — aba `Parâmetros`, mostrando UF e Município.**
-
-**Figura 1 — Seleção do município.** A UF e o Município informados na aba `Parâmetros` são utilizados pelo Power Query para definir o recorte apresentado no dashboard.
-
----
-
-## Tratamento dos dados com Power Query
-
-A principal atualização desta versão do projeto foi a substituição da base anteriormente utilizada, restrita a São Paulo, pela **base nacional completa do Censo Escolar 2024**.
-
-No Power Query, foi criada uma consulta de filtro a partir dos campos **UF e Município** definidos na planilha.
-
-A consulta principal foi combinada com esse filtro por meio de uma **Junção Interna (Inner Join)**, utilizando simultaneamente os campos de UF e Município. Dessa forma, embora a fonte original contenha escolas de todo o Brasil, apenas os registros referentes ao município selecionado são carregados para análise.
-
-Também foram realizadas **Junções Esquerdas (Left Join)** com as tabelas auxiliares de:
+Durante o tratamento, foram utilizadas tabelas auxiliares para identificação de:
 
 - Dependência administrativa;
 - Localização;
 - Localização diferenciada;
 - Situação de funcionamento.
 
-Além disso, foram criadas colunas condicionais para facilitar a análise dos dados no dashboard:
+Também foram criadas classificações e indicadores para facilitar a análise dos dados, incluindo:
 
-- **Tamanho da Escola**;
-- **Água**;
-- **Energia**;
-- **Esgoto**;
-- **Lixo**.
+- Tamanho da escola;
+- Abastecimento de água;
+- Fonte de energia;
+- Esgotamento sanitário;
+- Destinação do lixo.
 
-Nos indicadores de infraestrutura, foi utilizada uma lógica de prioridade baseada nas variáveis binárias presentes nos microdados.
+### Parâmetros
+
+O projeto utiliza parâmetros de **UF e município** como parte da organização e filtragem da base de dados utilizada no painel.
+
+<img width="2204" height="1466" alt="image" src="https://github.com/user-attachments/assets/c6b46d03-a3e1-4da2-a080-401c72ac22aa" />
 
 ---
 
 ## Dashboard
 
-O **`DASH DA EDUCAÇÃO`** apresenta visualizações construídas a partir das tabelas dinâmicas conectadas à base tratada pelo Power Query.
+O dashboard foi desenvolvido para apresentar as informações do Censo Escolar de maneira visual e interativa, facilitando a análise de características das escolas e das matrículas.
 
-O painel apresenta análises de:
+Entre as informações apresentadas estão:
 
-- distribuição das escolas por dependência administrativa;
-- distribuição das escolas por tamanho;
-- matrículas por etapa de ensino e dependência administrativa;
-- matrículas por gênero;
-- matrículas por faixa etária;
-- matrículas por raça/cor.
-
-Também foram adicionadas **segmentações de dados**, permitindo combinar diferentes filtros e observar como os indicadores se modificam.
-
-Entre os filtros disponíveis estão:
-
-- Localização;
 - Dependência administrativa;
-- Tamanho da Escola;
-- Água;
-- Esgoto;
-- Energia.
+- Matrículas por etapa de ensino;
+- Distribuição das escolas por tamanho;
+- Matrículas por gênero;
+- Matrículas por faixa etária;
+- Matrículas por raça/cor.
 
-As segmentações estão conectadas às tabelas dinâmicas utilizadas pelos gráficos, permitindo que diferentes visualizações do dashboard sejam alteradas conjuntamente.
+### Visão geral do dashboard
 
-### Dashboard atualizado
-
-> **INSERIR PRINT 2 AQUI — print da aba `DASH DA EDUCAÇÃO` inteira, mostrando os 6 gráficos e as segmentações.**
-
-**Figura 2 — Dashboard atualizado.** Visualizações e segmentações construídas a partir da base tratada pelo Power Query para o município selecionado.
+<img width="2284" height="1254" alt="image" src="https://github.com/user-attachments/assets/f9e5dc8f-ad4f-4a77-bbc2-d9fd956e6cce" />
 
 ---
 
-## Atualização automática por município
+## Segmentações de dados
 
-Uma das principais funcionalidades implementadas nesta versão é a possibilidade de alterar o município analisado sem reconstruir manualmente o dashboard.
+Foram utilizadas segmentações de dados para permitir diferentes recortes das informações apresentadas no painel.
 
-Por exemplo, ao informar **Osasco/SP** na aba `Parâmetros` e utilizar **Atualizar Tudo**, o Power Query filtra a base nacional e o dashboard passa a utilizar somente os registros correspondentes a Osasco.
+As segmentações possibilitam a aplicação de filtros relacionados às características das escolas e da infraestrutura disponível na base.
 
-Ao alterar novamente o parâmetro para **São Paulo/SP** e atualizar as consultas, as tabelas dinâmicas e os gráficos passam a apresentar os dados referentes ao município de São Paulo.
+Entre as categorias utilizadas estão:
 
-Esse processo permite reutilizar o mesmo painel para diferentes municípios a partir de uma única base nacional.
+- Localização;
+- Dependência administrativa;
+- Tamanho da escola;
+- Água;
+- Energia;
+- Esgoto.
 
-### Teste da atualização automática
+### Segmentações do painel
 
-> **INSERIR PRINT 3 AQUI — dashboard mostrando um município diferente do utilizado no Print 2.**
->
-> Exemplo: se o Print 2 estiver com São Paulo/SP, coloque aqui o dashboard atualizado para Osasco/SP.
+<img width="906" height="1266" alt="image" src="https://github.com/user-attachments/assets/eef5df46-3dd4-45e3-8d82-35097b809123" />
 
-**Figura 3 — Teste de atualização automática.** Após alterar o município na aba `Parâmetros` e utilizar a opção `Atualizar Tudo`, o dashboard é atualizado com os dados correspondentes ao novo município.
+<img width="918" height="728" alt="image" src="https://github.com/user-attachments/assets/22a0eedb-2901-42d2-a3b0-d2c37495ae57" />
 
+Os filtros permitem explorar diferentes recortes dos dados diretamente no dashboard.
+
+### Exemplo de aplicação dos filtros
+
+<img width="2224" height="1220" alt="image" src="https://github.com/user-attachments/assets/8fc2d635-c10f-4b4e-857c-9115c0dd8096" />
+
+---
+
+## Fonte dos dados
+
+Os dados utilizados são provenientes dos **Microdados do Censo Escolar 2024**, disponibilizados pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
+
+Fonte oficial:  
+https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data
 ---
 
 ## Uso de Inteligência Artificial
 
-**Para que foram utilizadas:** as ferramentas de Inteligência Artificial foram utilizadas como apoio na organização e revisão das informações do projeto, na elaboração do texto explicativo do dashboard e na estruturação da documentação do projeto.
+### Ferramenta utilizada
+
+ChatGPT (OpenAI).
+
+### Para que foi utilizada
+
+A ferramenta de Inteligência Artificial foi utilizada como apoio na organização e revisão das informações do projeto e na elaboração e estruturação do README.
+
+### Exemplo de prompt utilizado
+
+> "Organize uma descrição para um dashboard construído no Excel com dados do Censo Escolar sobre as escolas de São Paulo, explicando os filtros, gráficos e principais informações apresentadas."
+
+O conteúdo gerado foi revisado e adaptado pelo grupo de acordo com as características do projeto desenvolvido.
 
 ---
 
-## Fonte de Dados
+## Observações sobre os dados
 
-**Fonte oficial:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) — Microdados do Censo Escolar 2024.
+Os resultados apresentados no painel dependem das informações disponibilizadas na base original do Censo Escolar 2024 e do tratamento realizado no projeto.
 
-**Link oficial:**  
-https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos
+Valores ausentes ou categorias sem informação podem aparecer no painel como valores não informados ou em branco.
 
-**O que os dados representam:** a base reúne informações sobre os estabelecimentos de ensino brasileiros registrados no Censo Escolar de 2024. Nesta versão do projeto, é utilizada a base nacional completa, e o recorte do município é realizado dentro do Power Query de acordo com os parâmetros definidos pelo usuário.
-
-### Estrutura dos principais dados
-
-| Variável | Descrição |
-| --- | --- |
-| `SG_UF` | Sigla da Unidade da Federação |
-| `NO_MUNICIPIO` | Município em que a escola está localizada |
-| `NO_ENTIDADE` | Nome da escola/unidade educacional |
-| `TP_DEPENDENCIA` / `DEPENDENCIA.1` | Dependência administrativa |
-| `TP_LOCALIZACAO` / `LOCALIZACAO.1` | Localização urbana ou rural |
-| `TP_LOCALIZACAO_DIFERENCIADA` | Identificação de localização diferenciada |
-| `SITUACAO.1` | Situação de funcionamento da escola |
-| `QT_MAT_BAS` | Quantidade de matrículas da educação básica |
-| `Tamanho Escola` | Classificação da escola de acordo com a quantidade de matrículas |
-| `Água` | Forma de abastecimento de água identificada na escola |
-| `Energia` | Forma de fornecimento de energia |
-| `Esgoto` | Forma de esgotamento sanitário |
-| `Lixo` | Forma de destinação do lixo |
-
-Além dessas variáveis, o dashboard utiliza informações de matrículas por **etapa de ensino, gênero, faixa etária e raça/cor**.
+O projeto possui finalidade acadêmica e foi desenvolvido como exercício de tratamento, análise e visualização de dados públicos.
 
 ---
 
-## Participação do Grupo
+## Participação do grupo
 
-**O que aprendemos com este projeto:** aprendemos a trabalhar com uma base de dados de abrangência nacional utilizando o Power Query, aplicando filtros antes do carregamento dos dados para reduzir o volume processado pelo dashboard. Também praticamos junções entre diferentes tabelas, criação de colunas condicionais, tabelas e gráficos dinâmicos, segmentações de dados e atualização automática das visualizações a partir da mudança dos parâmetros de UF e Município.
+### Alexandre Jubram
+Participou da organização da base de dados e da revisão das variáveis utilizadas na construção dos indicadores e das visualizações.
 
-A atividade também permitiu compreender como estruturar um dashboard reutilizável, no qual o mesmo conjunto de visualizações pode ser aplicado a diferentes municípios sem a necessidade de reconstruir manualmente as análises.
+### Bettina Kalassa
+Participou da estruturação das tabelas dinâmicas e da organização dos indicadores utilizados no dashboard.
 
-### Papel de cada integrante
+### Izabel Born
+Participou da construção e organização das visualizações, dos gráficos e dos elementos do dashboard.
 
-| Integrante | Papel |
-| --- | --- |
-| Alexandre Jubram | Criação do repositório do projeto e organização das pastas do grupo |
-| Bettina Kalassa | Upload dos arquivos e colaboração na documentação dos projetos |
-| Izabel Born | Upload dos arquivos e revisão dos dados e disclaimers |
-| Maria Eduarda Pereira | Atualização do Projeto 2 com a base nacional no Power Query, organização das tabelas e gráficos dinâmicos, segmentações e atualização do README |
-| Maria Thereza Favaro | Revisão da estrutura e dos dados utilizados no Projeto 2 |
-| Yuri Neres | Reunião dos prints e organização das evidências para a entrega no eClass |
+### Maria Eduarda Pereira
+Participou da atualização do tratamento dos dados, da inclusão e revisão dos indicadores de infraestrutura, dos ajustes nas segmentações e visualizações do dashboard e da atualização da documentação do projeto.
+
+### Maria Thereza Favaro
+Participou da revisão do dashboard, da organização visual do painel e da verificação dos filtros e segmentações utilizados.
+
+### Yuri Neres
+Participou da conferência dos dados e indicadores, dos testes das funcionalidades do painel e da revisão final do projeto.
