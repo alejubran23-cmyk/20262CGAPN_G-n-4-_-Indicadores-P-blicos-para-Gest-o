@@ -8,6 +8,17 @@ O objetivo foi construir, no Microsoft Excel, um painel interativo a partir dos 
 
 A base contempla escolas de diferentes dependências administrativas — federal, estadual, municipal e privada. O tratamento dos dados foi realizado por meio do Power Query, com utilização de parâmetros de UF e município e integração de tabelas auxiliares.
 
+## Como usar
+
+1. Baixe o arquivo Excel da versão atualizada do Projeto 2 e abra-o no Excel.
+2. Na aba `Parâmetros`, preencha os campos **UF** e **Município**. Por exemplo, informe `SP` em **UF** e `Osasco` em **Município**.
+3. Na faixa de opções do Excel, vá em **Dados → Atualizar Tudo** e aguarde o fim da atualização.
+4. Volte ao painel para ver os dados do município selecionado. Para consultar outro município, altere os campos na aba `Parâmetros` e clique novamente em **Dados → Atualizar Tudo**.
+
+## O que mudou em relação à versão anterior
+
+A versão anterior usava uma base restrita a São Paulo. Na versão atualizada, substituímos essa base pelos dados nacionais do Censo Escolar 2024. Os valores de UF e município preenchidos na aba `Parâmetros` são usados pelo Power Query para selecionar os registros em que os dois campos coincidem, por meio de uma junção interna (`Inner Join`). Quando o usuário clica em **Dados → Atualizar Tudo**, a consulta aplica o recorte e atualiza os dados usados no painel.
+
 ---
 
 ## Tratamento dos dados
@@ -120,6 +131,10 @@ Valores ausentes ou categorias sem informação podem aparecer no painel como va
 O projeto possui finalidade acadêmica e foi desenvolvido como exercício de tratamento, análise e visualização de dados públicos.
 
 ---
+
+### O que o grupo aprendeu
+
+Aprendemos a trabalhar com uma base nacional no Power Query e a filtrar os dados antes de carregá-los no painel. Usamos duas células nomeadas no Excel para definir a UF e o município e aplicamos uma junção interna para manter os registros que correspondem aos dois valores. Também aprendemos a combinar a base do Censo com tabelas auxiliares e a atualizar o painel a partir dos parâmetros escolhidos. Com isso, a mesma planilha pode ser usada para consultar municípios diferentes.
 
 ## Participação do grupo
 
