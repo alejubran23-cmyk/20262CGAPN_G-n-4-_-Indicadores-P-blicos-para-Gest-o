@@ -20,3 +20,8 @@ Projeto desenvolvido em Excel para simulação do repasse do Programa Nacional d
 ### Projeto 2 — Painel do Censo Escolar 2024
 
 Dashboard desenvolvido em Excel e Power Query a partir dos Microdados do Censo Escolar 2024, com filtragem por UF e município, tabelas e gráficos dinâmicos e segmentações de dados.
+
+### Projeto 3 — Simulador de Repasse do PNAE em Python
+
+Simulador em Python que calcula o repasse anual do PNAE e estima quanto desse repasse cobre o custo dos alimentos. A simulação foi aplicada à EMEF Dilermando Dias dos Santos, da rede municipal de São Paulo.
+
