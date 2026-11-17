@@ -25,3 +25,6 @@ Dashboard desenvolvido em Excel e Power Query a partir dos Microdados do Censo E
 
 Simulador em Python que calcula o repasse anual do PNAE e estima quanto desse repasse cobre o custo dos alimentos. A simulação foi aplicada à EMEF Dilermando Dias dos Santos, da rede municipal de São Paulo.
 
+## Projeto 4 — Painel Interativo do Censo Escolar em Python
+
+Painel desenvolvido em Python com pandas e Streamlit para explorar os dados do Censo Escolar 2024 de 30 municípios de quatro regiões do estado de São Paulo. Os filtros permitem visualizar os totais de escolas e matrículas, comparar características e infraestrutura e consultar o mapa e a lista de escolas.
