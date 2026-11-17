@@ -139,11 +139,12 @@ As ferramentas foram utilizadas como apoio na organização do código em Python
 
 **Exemplo de prompt utilizado**
 
-> esse simulador ta pronto? essa é uma das partes do projeto 3, certo? tem tudo que a pro pediu?
+> Em que parte do README do Projeto 3 devo colocar os prints do simulador? Sugira uma legenda curta para identificar o teste com a escola real e o teste com os dados do Projeto 1.
 
 **O que foi ajustado manualmente**
 
-Na revisão do simulador, retomamos a orientação da professora de que o programa deve informar quando o repasse federal cobre todo o custo dos alimentos. Pedimos ao Claude que testasse o caso em que os dois valores são iguais. O teste mostrou que a tela já exibia 100,0% de cobertura e R$ 0,00 de diferença, mas a mensagem exigida ainda não aparecia. O Claude ajustou o arredondamento dos dois valores para centavos antes da comparação. Depois, conferimos a versão atualizada com apoio do ChatGPT e verificamos que a mensagem passou a aparecer e que o exemplo do Projeto 1 continuou retornando R$ 37.660,00 e porte Pequena.
+Partimos do simulador da Aula 18 e adaptamos o código para o Projeto 3. Selecionamos uma escola municipal em atividade no Censo Escolar 2024, levantamos as matrículas por etapa e pesquisamos uma referência para o custo dos alimentos por refeição. Com esse valor, acrescentamos ao simulador o cálculo do custo anual dos alimentos, do percentual coberto pelo repasse federal e da diferença a ser financiada por outras fontes. Também conferimos se o programa mostra a mensagem prevista quando o repasse é suficiente para cobrir o custo estimado.
+Rodamos o simulador no terminal com os dados da escola escolhida e com os dados do Projeto 1. No segundo teste, comparamos o resultado com a planilha em Excel e confirmamos o repasse anual de R$ 37.660,00 e a classificação da escola como Pequena. Por fim, tiramos os prints dos dois testes e organizamos no README as instruções de uso, as fontes dos dados e a interpretação dos resultados.
 
 ## Fonte de Dados
 
