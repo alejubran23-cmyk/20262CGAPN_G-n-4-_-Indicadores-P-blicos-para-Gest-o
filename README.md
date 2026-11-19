@@ -28,3 +28,4 @@ Simulador em Python que calcula o repasse anual do PNAE e estima quanto desse re
 ### Projeto 4 — Painel Interativo do Censo Escolar em Python
 
 Painel desenvolvido em Python com pandas e Streamlit para explorar os dados do Censo Escolar 2024 de 30 municípios de quatro regiões do estado de São Paulo. Os filtros permitem visualizar os totais de escolas e matrículas, comparar características e infraestrutura e consultar o mapa e a lista de escolas.
+./projeto-4-painel-censo-python/
